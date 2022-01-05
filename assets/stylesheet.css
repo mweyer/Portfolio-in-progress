@@ -1,89 +1,80 @@
-/*I'm not 100% sure where the :root selector should go as yet, 
-so I'm just placing it at the top*/
 :root {
-    /*Laying out the colors I'll use to style the app. I'll be using variables for these
-    for the sake of convenience.*/
-    --dark: #31343d;
-    --light-blue: #92cccd;
-    --grey-blue: #475b79; 
-    --off-white: #ededf6;
+    --C1: #FFFFFF;
+    --C2: #86C232;
+    --C3: #222629;
+    --C4: #61892F;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body {
-    background-color: grey;
+    background-color: black;
 }
 
-
-/**/
 header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
-
-    padding: 1.25rem;
+    padding: 25px;
     padding-left: 0px;
+    
 }
 
 header h1 {
     flex: 0 0 300px;
     padding: 10px 20px;
-    background-color: var(--light-blue);
-    color: var(--dark);
-    font-size: 2.5rem;
+    background-color: var(--C2);
+    color: var(--C1);
+    font-size: 30px;
     text-align: right;
 }
 
 header nav {
     display: flex;
     flex: 0 0 50%;
-    margin-top: 2rem;
+    margin-top: 30px;
     justify-content: space-evenly;
 }
 
-/*I've set up the nav bar to appear in-line with the header*/
 header nav a {
     display: inline;
-    font-size: 1.25rem;
-    color: var(--light-blue);
-    margin-right: .5rem;
+    font-size: 25px;
+    color: var(--C2);
+    margin-right: 10px;
     text-decoration-thickness: 0.2rem;
 }
 
-header nav a:hover, header nav a:focus, header nav a:active{
+header nav a:hover, header nav a:focus, header nav a:active {
     color: white;
 }
 
-/*Now for the code handling the main content blocks of the page*/
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
     margin: 0;
-    background-color: var(--off-white);
-    color: var(--grey-blue);
+    background-color: var(--C4);
+    color: var(--C3);
 }
 
 main aside {
     width: 20%;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
+    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
 main aside h1 {
     width: 90%;
     text-align: right;
-    font-size: 2.5rem;
+    font-size: 30px;
 }
 
-/*I want the content to shrink more quickly than the aside for aesthetic purposes*/
 main section {
     flex-grow: 2;
     flex-shrink: 2;
@@ -91,36 +82,33 @@ main section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-left: 0.2rem solid var(--grey-blue);
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    border-left: 4px solid var(--C3);
+    margin-left: 16px;
+    margin-bottom: 16px;
 }
 
-/*Classes for handling hero image and subtitle*/
-.hero-image {
+.banner {
     position: relative;
-    height: 200px;
+    height: 100px;
     width: 100%;
     margin: 0;
-    background-image: url(C:\Users\elect\Desktop\code\Portfolio-in-progress\assets\images\main-banner.jpg);
+    background-image: url(https://image.freepik.com/free-vector/abstract-halftone-colorful-banner-background_1035-17982.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.hero-text {
+.banner-text {
     position: absolute;
     bottom: 10%;
     right: 10%;
 }
-
-.hero-text h1  {
+.banner-text h1 {
     width: 300px;
     padding: 10px;
-    background-color: var(--light-blue);
-
-    font-size: 1.5rem;
-    color: var(--dark);
+    background-color: var(--C2);
+    font-size: 20px;
+    color: var(--C1);
 }
 
 .small-image {
@@ -131,106 +119,91 @@ main section {
     height: 100px;
     opacity: 50%;
     margin: 0;
-    background-image: url("https://i.imgur.com/lzwSM0W.png");
+    background-image: url(https://www.sentryds.com/wp-content/uploads/2021/11/craneware-banner-bkgd-1500x602.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/*Simple code to make the image the user selects plainly visible*/
 .small-image:hover .image-holder, .small-image:active .image-holder, .small-image:focus .image-holder,
-#main-image:hover .image-holder, #main-image:active .image-holder, #main-image:focus .image-holder  {
+#main-image:hover .image-holder, #main-image:active .image-holder, #main-image:focus .image-holder {
     opacity: 100%;
 }
 
 .text-holder {
     position: absolute;
     min-width: 150px;
-    padding: 1rem 0.5rem;
+    padding: 18px 10px;
     left: 0px;
     bottom: 10%;
-    
-    background-color: var(--light-blue);
+    background-color: var(--C2);
     text-align: center;
-    color: var(--dark);
+    color: var(--C1);
 }
 
 #about-me p {
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #recent-work a {
     position: relative;
     margin: 1rem;
-    padding: 0.2rem;
-    background-color: var(--light-blue);
+    padding: 5px;
+    background-color: var(--C2);
 }
-
 
 #main-image {
     width: 90%;
 }
-
 #main-image .image-holder {
     height: 250px;
     opacity: 50%;
     margin: 0;
-    background-image: url("https://i.imgur.com/lzwSM0W.png");
+    background-image: url(https://www.sentryds.com/wp-content/uploads/2021/11/craneware-banner-bkgd-1500x602.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-/*I initially handled my Contact Me section with nav, but for some reason I was having trouble
-getting the links to switch to formatting vertically when the app ran in mobile dimensions.
-There was probably something simple I was missing, but the way I have it now achieves the
-look I desired. I might return later and work on this some more.*/
 #contact-me ul {
-    margin-top: 1.25rem;
+    margin-top: 25px;
     list-style-type: none;
 }
 
 #contact-me ul li {
     display: inline;
-    margin: 1.5rem;
+    margin: 25px;
 }
 
 #contact-me a {
-    font-size: 1.25rem;
-    color: var(--grey-blue);
+    font-size: 25px;
+    color: var(--C3);
     text-decoration-thickness: 0.2rem;
 }
 
 #contact-me a:hover, #contact-me a:focus, #contact-me a:active {
-    color: var(--light-blue);
+    color: var(--C2);
 }
 
+@media screen and (max-width: 760px){
 
-@media screen and (max-width: 768px){
-
-    /*For the mobile layout, I want the header to be above the navbar and for both
-    to be centered. Changing header's justify-content property to center and 
-    header nav's flex-basis to 80% accomplishes this.*/
     header {
         justify-content: center;
-        padding-left: 1.25rem;
+        padding-left: 25px;
     }
-
     header h1 {
         text-align: center;
     }
 
-    header nav {            
+    header nav {
         flex-basis: 80%;
     }
 
-    /*I'm adjusting the main content block to format vertically when in mobile mode*/
     main aside {
         margin-right: 0;
         width: 90%;
     }
-
     main aside h1 {
         width: 100%;
         text-align: center;
@@ -238,33 +211,30 @@ look I desired. I might return later and work on this some more.*/
 
     main section {
         width: 90%;
-        border-top: 0.2rem solid var(--grey-blue);
+        border-top: 8px solid var(--C3);
         border-left: none;
     }
 
-    /*Slightly decreasing the height of the hero image so it doesn't take up too much
-    screen real estate on mobile devices*/
-    .hero-image {
-        height: 150px;
+    .banner {
+        height: 180px;
     }
 
     .small-image {
         width: 90%;
     }
-
+    
     #about-me p {
-        margin: 1rem;
+        margin: 15px;
         margin-bottom: 0;
     }
 
     #contact-me ul {
         margin-top: 0;
     }
-
+    
     #contact-me ul li {
         display: block;
-    }    
-
+    }
 }
 
 
