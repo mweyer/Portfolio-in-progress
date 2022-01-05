@@ -5,6 +5,8 @@ This is the beginning of my profile page for my portfolio.  I am making this pag
 ## Installation
 As of right now, no installation is required just run the page from github as is.
 
+![alt text](https://github.com/mweyer/Portfolio-in-progress/blob/main/assets/Images/port-screenshot.png?raw=true)
+
 ## Credits
 While i did write the code myself, I had a lot of ideas and help from my classmates from the program.  Images that were used were from https://sentryds.com.
 
