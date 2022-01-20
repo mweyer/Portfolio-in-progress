@@ -125,9 +125,25 @@ main section {
     background-repeat: no-repeat;
 }
 
+.furiendr-image {
+    height: 100px;
+    opacity: 50%;
+    margin: 0;
+    background-image: url(https://mweyer.github.io/First-Group-Project/assets/images/paw-print-green.png);
+    background-size: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
 .small-image:hover .image-holder, .small-image:active .image-holder, .small-image:focus .image-holder,
 #main-image:hover .image-holder, #main-image:active .image-holder, #main-image:focus .image-holder {
     opacity: 100%;
+}
+
+.furiendr-image:hover, .furiendr-image:active, .furiendr-image:focus{
+    opacity: 100%
+
 }
 
 .text-holder {
